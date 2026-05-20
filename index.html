@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>✨ Happy 25th Birthday, Olva Mediasari ✨</title>
+    <!-- Fonts Modern & Variasi -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none; /* mencegah teks terblok di hp, tetap nyaman */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(145deg, #0f0c29, #302b63, #24243e);
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Efek partikel modern (grid + neon) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 20% 40%, rgba(255, 100, 150, 0.1) 2%, transparent 2.5%);
+            background-size: 35px 35px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Container utama - kaca modern dengan neon */
+        .container {
+            max-width: 620px;
+            width: 100%;
+            background: rgba(20, 15, 45, 0.75);
+            backdrop-filter: blur(18px);
+            border-radius: 55px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5), 0 0 0 3px rgba(255, 80, 120, 0.5), 0 0 0 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: 0.3s;
+            position: relative;
+            z-index: 12;
+            padding: 30px 22px 45px;
+            border: 1px solid rgba(255, 120, 160, 0.4);
+        }
+
+        /* Slide Animasi Mewah */
+        .slide {
+            display: none;
+            animation: slideModern 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+        .slide.active {
+            display: block;
+        }
+        @keyframes slideModern {
+            from { opacity: 0; transform: scale(0.96) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFB347, #FF6B8B, #FF3B6F);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 18px;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.3px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #FFB6C1;
+            margin: 12px 0;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .message-box {
+            background: rgba(25, 20, 50, 0.7);
+            backdrop-filter: blur(8px);
+            padding: 22px 20px;
+            border-radius: 45px;
+            margin: 20px 0;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #ffe5e5;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+            line-height: 1.5;
+            border: 1px solid rgba(255, 100, 130, 0.5);
+        }
+
+        .long-text {
+            font-size: 0.95rem;
+            text-align: left;
+            max-height: 270px;
+            overflow-y: auto;
+            padding-right: 6px;
+            font-family: 'Inter', sans-serif;
+            scrollbar-width: thin;
+        }
+        .long-text::-webkit-scrollbar {
+            width: 4px;
+            background: #3a2a4a;
+        }
+        .long-text::-webkit-scrollbar-thumb {
+            background: #ff6b8b;
+            border-radius: 10px;
+        }
+
+        /* Kode Angka Modern */
+        .code-input {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .code-input input {
+            width: 70px;
+            height: 70px;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: monospace;
+            border: 2px solid #ff6b8b;
+            border-radius: 28px;
+            background: #0f0b20;
+            color: #FFD966;
+            outline: none;
+            transition: 0.2s;
+            box-shadow: 0 0 5px rgba(255, 107, 139, 0.3);
+        }
+        .code-input input:focus {
+            border-color: #FFB347;
+            box-shadow: 0 0 15px rgba(255, 180, 71, 0.6);
+            background: #1a1335;
+        }
+
+        /* Tombol Modern */
+        .btn {
+            background: linear-gradient(95deg, #ff5f7c, #ff3b5c);
+            border: none;
+            padding: 12px 28px;
+            border-radius: 60px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: 'Inter', sans-serif;
+            margin: 8px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+        }
+        .btn:active {
+            transform: scale(0.96);
+            background: linear-gradient(95deg, #ff4668, #e62e52);
+        }
+        .btn-primary {
+            background: linear-gradient(95deg, #FFB347, #FF8C42);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+        .btn-pink {
+            background: linear-gradient(95deg, #FF6B8B, #E8436A);
+        }
+        .btn-yes {
+            background: linear-gradient(95deg, #2ecc71, #27ae60);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            font-size: 1.2rem;
+            padding: 12px 38px;
+        }
+        .btn-no {
+            background: linear-gradient(95deg, #e74c3c, #c0392b);
+            position: relative;
+            transition: 0.05s linear;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            flex-wrap: wrap;
+            margin: 28px 0;
+            align-items: center;
+        }
+
+        /* LEDAKAN BUNGA TULIP (menutupi layar) */
+        .tulip-blast {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            font-size: 44px;
+            animation: blastAnim 1.2s ease-out forwards;
+        }
+        @keyframes blastAnim {
+            0% { transform: scale(0.1) rotate(0deg); opacity: 1; }
+            50% { transform: scale(1.3) rotate(180deg); opacity: 1; }
+            100% { transform: scale(1) rotate(360deg); opacity: 0; visibility: hidden; }
+        }
+
+        /* floating love & sparkle */
+        .floating-spark {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1100;
+            font-size: 26px;
+            animation: floatUp 3s ease-out forwards;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0.9; bottom: -20px; }
+            100% { transform: translateY(-120vh) rotate(380deg); opacity: 0; }
+        }
+
+        /* responsive HP */
+        @media (max-width: 550px) {
+            .container { padding: 20px 16px 35px; }
+            .code-input input { width: 55px; height: 55px; font-size: 1.7rem; }
+            .btn { padding: 8px 18px; font-size: 0.85rem; }
+            h1 { font-size: 1.8rem; }
+            .btn-yes { font-size: 1rem; padding: 9px 28px; }
+            .long-text { max-height: 210px; }
+            .tulip-blast { font-size: 36px; }
+        }
+
+        .shake-error {
+            animation: shakeGlitch 0.3s ease-in-out 0s 2;
+        }
+        @keyframes shakeGlitch {
+            0%,100%{ transform: translateX(0); }
+            25%{ transform: translateX(-7px); }
+            75%{ transform: translateX(7px); }
+        }
+        .pulse-glow {
+            animation: neonPulse 0.8s ease;
+        }
+        @keyframes neonPulse {
+            0% { text-shadow: 0 0 0 #FFB347; }
+            50% { text-shadow: 0 0 12px #ff6b8b; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="appContainer">
+    <!-- SLIDE 1: Kode angka 200725 -->
+    <div class="slide active" id="slideCode">
+        <div style="font-size: 75px; filter: drop-shadow(0 0 5px #ff6b8b);">✨🔐✨</div>
+        <h1>Masukkan Kode Rahasia</h1>
+        <div class="message-box">
+            🌸 6 digit spesial untukmu 🌸<br>
+            <span style="font-size: 0.8rem; color:#FFD966;">[ jawaban: 200725 ]</span>
+        </div>
+        <div class="code-input">
+            <input type="text" maxlength="1" class="code-digit" id="digit1" pattern="\d" inputmode="numeric">
+            <input type="text" maxlength="1" class="code-digit" id="digit2" pattern="\d" inputmode="numeric">
+            <input type="text" maxlength="1" class="code-digit" id="digit3" pattern="\d" inputmode="numeric">
+            <input type="text" maxlength="1" class="code-digit" id="digit4" pattern="\d" inputmode="numeric">
+            <input type="text" maxlength="1" class="code-digit" id="digit5" pattern="\d" inputmode="numeric">
+            <input type="text" maxlength="1" class="code-digit" id="digit6" pattern="\d" inputmode="numeric">
+        </div>
+        <button class="btn btn-primary" id="checkCodeBtn">🔓 BUKA KEJUTAN 🔓</button>
+        <div id="codeError" style="color: #ffb6c1; margin-top: 18px; font-weight: 500; min-height: 45px;"></div>
+    </div>
+
+    <!-- SLIDE 2: Hi My Dear (Olva Mediasari) + tab disini -->
+    <div class="slide" id="slideHiDear">
+        <div style="font-size: 85px;">💖✨👋</div>
+        <h1>Hi My Dear, Olva Mediasari 💕</h1>
+        <div class="message-box" style="font-size: 1.3rem;">✨ Kamu luar biasa spesial ✨</div>
+        <button class="btn btn-pink" id="tabHereBtn">📱 TAB DISINI 📱</button>
+    </div>
+
+    <!-- SLIDE 3: Are you ready + YES/NO (NO menghindar) -->
+    <div class="slide" id="slideReady">
+        <div style="font-size: 70px;">🎁💖❓</div>
+        <h2>Are you ready to open this?</h2>
+        <div class="button-group" id="yesNoGroup">
+            <button class="btn btn-yes" id="yesBtn">✅ YES</button>
+            <button class="btn btn-no" id="noBtn">❌ NO</button>
+        </div>
+        <div style="margin-top: 15px; font-size: 13px; color: #FFC0CB;">✨ Tekan YES untuk kejutan ledakan bunga tulip ✨</div>
+    </div>
+
+    <!-- SLIDE 4: Ucapan 25 tahun + tombol open it -->
+    <div class="slide" id="slideBirthday">
+        <div style="font-size: 70px;">🎂🥳💖</div>
+        <div class="message-box" style="max-height: 55vh; overflow-y: auto;">
+            <div style="font-weight: 800; font-size: 1.3rem; background: linear-gradient(135deg, #FFB347, #FF6B8B); background-clip: text; -webkit-background-clip: text; color: transparent;">Today, this pretty girl turns 25! 🎉</div>
+            <div style="margin: 12px 0;">Happy Birthday, my love 😘❤️</div>
+            <div class="long-text">
+                Happy Birthday, my love. Thank you for being the most wonderful person in my life and for always making my days brighter with your love and care. I feel so lucky to have someone as kind, supportive, and special as you by my side. On your special day, I wish you endless happiness, good health, success, and all the beautiful things your heart desires. May our relationship continue to grow stronger, and may we create many more unforgettable memories together. I love you today, tomorrow, and always. 💖💖💖
+            </div>
+        </div>
+        <button class="btn btn-primary" id="openItBtn">✨ OPEN IT ✨</button>
+    </div>
+
+    <!-- SLIDE 5: Kalimat pujian + I Love You so much -->
+    <div class="slide" id="slideFinal">
+        <div style="font-size: 85px;">💐💖💐</div>
+        <div class="message-box" style="font-size: 1.2rem; font-weight: bold; font-family: 'Playfair Display', serif;">
+            "Happy Birthday to my most beautiful, loving and caring girlfriend"
+        </div>
+        <div style="font-size: 2rem; margin: 25px 0; font-weight: 800; background: linear-gradient(135deg, #FFB347, #FF6B8B); background-clip: text; -webkit-background-clip: text; color: transparent;">I Love You so much!!! 💕💕💕</div>
+        <button class="btn btn-pink" id="replayBtn">🎈 Rayakan Lagi 🎈</button>
+    </div>
+</div>
+
+<!-- Musik Cinta (lagu romantis instrumental) -->
+<audio id="bgMusic" loop preload="auto">
+    <source src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_297776a6b8.mp3?filename=romantic-piano-243688.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    // ======================= MUSIK =======================
+    const audio = document.getElementById('bgMusic');
+    audio.loop = true;
+    audio.volume = 0.45;
+    let musicStarted = false;
+    function startMusic() {
+        if (!musicStarted) {
+            audio.play().then(() => musicStarted = true).catch(e => console.log("interaksi diperlukan"));
+        }
+    }
+
+    // ======================= EFEK FLOATING =======================
+    function spawnFloatingIcons(count = 35) {
+        const icons = ['❤️', '💖', '💗', '🌷', '🌹', '🌸', '💐', '✨', '💕', '🌼'];
+        for (let i = 0; i < count; i++) {
+            setTimeout(() => {
+                const el = document.createElement('div');
+                el.className = 'floating-spark';
+                const randIcon = icons[Math.floor(Math.random() * icons.length)];
+                el.innerText = randIcon;
+                el.style.left = Math.random() * 100 + '%';
+                el.style.fontSize = (Math.random() * 28 + 20) + 'px';
+                el.style.animationDuration = (Math.random() * 2.8 + 2.2) + 's';
+                document.body.appendChild(el);
+                setTimeout(() => el.remove(), 3200);
+            }, i * 55);
+        }
+    }
+
+    // ======================= LEDAKAN BUNGA TULIP MASSAL (menutupi layar) =======================
+    function tulipExplosionOverlay() {
+        const total = 220; // ledakan besar menutupi seluruh layar
+        for (let i = 0; i < total; i++) {
+            setTimeout(() => {
+                const flower = document.createElement('div');
+                flower.className = 'tulip-blast';
+                const variants = ['🌷', '🌷', '🌷', '🌹', '🌸', '🌼', '💐', '❤️', '💖'];
+                const randomFlower = variants[Math.floor(Math.random() * variants.length)];
+                flower.innerText = randomFlower;
+                flower.style.left = Math.random() * 100 + '%';
+                flower.style.top = Math.random() * 100 + '%';
+                flower.style.fontSize = (Math.random() * 48 + 32) + 'px';
+                document.body.appendChild(flower);
+                setTimeout(() => flower.remove(), 1250);
+            }, i * 12);
+        }
+        if (navigator.vibrate) navigator.vibrate(180);
+        spawnFloatingIcons(55);
+    }
+
+    // ======================= SLIDE MANAGEMENT =======================
+    const slides = {
+        code: document.getElementById('slideCode'),
+        hiDear: document.getElementById('slideHiDear'),
+        ready: document.getElementById('slideReady'),
+        birthday: document.getElementById('slideBirthday'),
+        final: document.getElementById('slideFinal')
+    };
+
+    function showSlide(slideName) {
+        Object.keys(slides).forEach(key => slides[key].classList.remove('active'));
+        slides[slideName].classList.add('active');
+        if (navigator.vibrate) navigator.vibrate(35);
+        if (slideName === 'birthday' || slideName === 'final') spawnFloatingIcons(20);
+    }
+
+    // ========== SLIDE 1: KODE ANGKA ==========
+    const inputs = document.querySelectorAll('.code-digit');
+    const checkBtn = document.getElementById('checkCodeBtn');
+    const errorDiv = document.getElementById('codeError');
+
+    inputs.forEach((input, idx) => {
+        input.addEventListener('input', (e) => {
+            if (input.value.length === 1 && idx < inputs.length - 1) inputs[idx+1].focus();
+        });
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Backspace' && input.value === '' && idx > 0) inputs[idx-1].focus();
+        });
+        input.addEventListener('keypress', (e) => {
+            if (!/[0-9]/.test(e.key)) e.preventDefault();
+        });
+    });
+
+    function getCode() { return Array.from(inputs).map(inp => inp.value).join(''); }
+
+    checkBtn.addEventListener('click', () => {
+        startMusic();
+        if (getCode() === "200725") {
+            errorDiv.innerHTML = "✅✨ Kode Benar! Membuka pintu hati... ✨✅";
+            spawnFloatingIcons(45);
+            setTimeout(() => showSlide('hiDear'), 800);
+        } else {
+            errorDiv.innerHTML = "❌ Kode salah, coba lagi sayangku ❤️";
+            errorDiv.classList.add('shake-error');
+            setTimeout(() => errorDiv.classList.remove('shake-error'), 500);
+            if (navigator.vibrate) navigator.vibrate(120);
+        }
+    });
+
+    // ========== SLIDE 2: TAB DISINI ==========
+    document.getElementById('tabHereBtn').addEventListener('click', () => {
+        startMusic();
+        spawnFloatingIcons(35);
+        showSlide('ready');
+    });
+
+    // ========== SLIDE 3: YES / NO dengan NO MENGHINDAR ==========
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const yesNoGroup = document.getElementById('yesNoGroup');
+
+    function moveNoButton() {
+        if (!slides.ready.classList.contains('active')) return;
+        const containerRect = yesNoGroup.getBoundingClientRect();
+        const maxX = Math.max(30, containerRect.width - noBtn.offsetWidth - 15);
+        const maxY = Math.max(40, 120);
+        const randX = Math.random() * maxX;
+        const randY = Math.random() * maxY;
+        noBtn.style.position = 'relative';
+        noBtn.style.left = `${randX}px`;
+        noBtn.style.top = `${randY}px`;
+        noBtn.style.transition = '0.07s linear';
+        setTimeout(() => noBtn.style.transition = '', 100);
+    }
+
+    noBtn.addEventListener('mouseenter', moveNoButton);
+    noBtn.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        moveNoButton();
+    });
+    noBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        moveNoButton();
+        const toastTip = document.createElement('div');
+        toastTip.innerText = "🙈 Tombol NO-nya lari! Tekan YES dong sayang 🙈";
+        toastTip.style.position = 'fixed';
+        toastTip.style.bottom = '25px';
+        toastTip.style.left = '50%';
+        toastTip.style.transform = 'translateX(-50%)';
+        toastTip.style.background = '#1f1a2edd';
+        toastTip.style.backdropFilter = 'blur(12px)';
+        toastTip.style.padding = '10px 22px';
+        toastTip.style.borderRadius = '50px';
+        toastTip.style.color = '#FFD966';
+        toastTip.style.fontWeight = 'bold';
+        toastTip.style.border = '1px solid #ff6b8b';
+        toastTip.style.zIndex = '10000';
+        document.body.appendChild(toastTip);
+        setTimeout(() => toastTip.remove(), 1500);
+        if (navigator.vibrate) navigator.vibrate(60);
+    });
+
+    // YES BUTTON: ledakan tulip masif + pindah slide
+    yesBtn.addEventListener('click', () => {
+        startMusic();
+        tulipExplosionOverlay(); // Ledakan bunga tulip menutupi seluruh layar
+        
+        setTimeout(() => {
+            showSlide('birthday');
+            // ledakan ekstra biar makin meriah
+            setTimeout(() => tulipExplosionOverlay(), 300);
+        }, 750);
+    });
+
+    // ========== SLIDE 4: OPEN IT menuju final ==========
+    document.getElementById('openItBtn').addEventListener('click', () => {
+        startMusic();
+        spawnFloatingIcons(70);
+        // ledakan bunga tambahan
+        for (let i = 0; i < 70; i++) {
+            setTimeout(() => {
+                const extraFlower = document.createElement('div');
+                extraFlower.className = 'tulip-blast';
+                extraFlower.innerText = ['🌷','🌷','🌹','🌸','💐'][Math.floor(Math.random()*5)];
+                extraFlower.style.left = Math.random() * 100 + '%';
+                extraFlower.style.top = Math.random() * 100 + '%';
+                extraFlower.style.fontSize = (Math.random() * 42 + 28) + 'px';
+                document.body.appendChild(extraFlower);
+                setTimeout(() => extraFlower.remove(), 1100);
+            }, i * 20);
+        }
+        showSlide('final');
+    });
+
+    // ========== SLIDE 5: REPLAY ==========
+    document.getElementById('replayBtn').addEventListener('click', () => {
+        // reset semua input kode
+        inputs.forEach(inp => inp.value = '');
+        errorDiv.innerHTML = '';
+        // reset posisi tombol NO
+        noBtn.style.position = 'relative';
+        noBtn.style.left = '0px';
+        noBtn.style.top = '0px';
+        showSlide('code');
+        spawnFloatingIcons(25);
+        startMusic();
+    });
+
+    // ========== AGAR TOMBOL NO TERUS MENGHINDAR SELAMA SLIDE READY ==========
+    let avoidInterval = null;
+    function startAvoiding() {
+        if (avoidInterval) clearInterval(avoidInterval);
+        avoidInterval = setInterval(() => {
+            if (slides.ready.classList.contains('active')) {
+                if (noBtn && window.getComputedStyle(noBtn).display !== 'none') {
+                    if (Math.random() > 0.55) moveNoButton();
+                }
+            }
+        }, 1300);
+    }
+    startAvoiding();
+
+    // Observer untuk menjaga state
+    const readyObserver = new MutationObserver(() => {
+        if (slides.ready.classList.contains('active')) {
+            if (noBtn.style.position !== 'relative') noBtn.style.position = 'relative';
+        }
+    });
+    readyObserver.observe(slides.ready, { attributes: true, attributeFilter: ['class'] });
+
+    // Efek awal saat load
+    window.addEventListener('load', () => {
+        console.log("💖 Selamat Ulang Tahun Olva Mediasari! 💖");
+        setTimeout(() => spawnFloatingIcons(20), 500);
+    });
+
+    // Mulai musik dengan interaksi pertama di halaman
+    document.body.addEventListener('click', () => startMusic(), { once: true });
+
+    // Getar untuk momen penting
+    yesBtn.addEventListener('click', () => navigator.vibrate?.(100));
+    document.getElementById('openItBtn').addEventListener('click', () => navigator.vibrate?.(70));
+</script>
+</body>
+</html>
